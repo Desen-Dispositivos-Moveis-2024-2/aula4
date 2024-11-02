@@ -6,10 +6,14 @@ const ExemploDatePicker = () => {
     const [data, setData] = useState(new Date());
     const [mostrarPicker, setMostrarPicker] = useState(false);
 
-    const aoAlterarData = (dataSelecionada) => {
-        const novaData = dataSelecionada || data;
-        setMostrarPicker(false);
-        setData(novaData);
+    const aoAlterarData = (evento, dataSelecionada) => {
+        if (evento.type === 'set') {
+            const novaData = dataSelecionada || data;
+            setMostrarPicker(false);
+            setData(novaData);
+        } else {
+            setMostrarPicker(false);
+        }
     };
 
     return (

@@ -19,7 +19,7 @@ import ExemploSwitchSelector from './components/ExemploSwitchSelector';
 export default function App() {
   return (
     <View style={styles.container}>
-      <ExemploActivityIndicator></ExemploActivityIndicator>
+      <ExemploDatePicker></ExemploDatePicker>
       <StatusBar style="auto" />
     </View>
   );
